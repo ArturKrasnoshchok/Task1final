@@ -1,6 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Task1</string>
     <string name="kitty">Hello Kitty</string>
     <string name="settings">Settings</string>
-
 </resources>
