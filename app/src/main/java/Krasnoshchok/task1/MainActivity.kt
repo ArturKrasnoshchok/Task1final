@@ -5,12 +5,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
 class MainActivity : AppCompatActivity() {
-    lateinit var bindibg: ActivityMainBinding
+
+    private lateinit var bindibg: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        bindibg= ActivityMainBinding.inflate(layoutInflater)
+        bindibg = ActivityMainBinding.inflate(layoutInflater)
         setContentView(bindibg.root)
-
     }
+
 }
