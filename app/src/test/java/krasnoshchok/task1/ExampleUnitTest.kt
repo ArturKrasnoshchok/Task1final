@@ -1,4 +1,4 @@
-package Krasnoshchok.task1
+package krasnoshchok.task1
 
 import org.junit.Test
 

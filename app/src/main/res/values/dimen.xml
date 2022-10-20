@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="avatar_image_size">112dp</dimen>
+    <dimen name="avatar_image_size_horizontal">60dp</dimen>
 
 
     <dimen name="text_size_small_12">12sp</dimen>
@@ -16,6 +17,9 @@
     <dimen name="margin_extra_large">24dp</dimen>
      <dimen name="margin_button_logo">32dp</dimen>
     <dimen name="margin_extra_large_62">62dp</dimen>
+    <dimen name="margin_extra_large_68">68dp</dimen>
 
     <dimen name="corner_radius">6dp</dimen>
+
+    <dimen name="button_width">250dp</dimen>
 </resources>

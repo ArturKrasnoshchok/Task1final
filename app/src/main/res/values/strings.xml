@@ -10,5 +10,12 @@
     <string name="already_have_an_account_text">Already have an account?</string>
     <string name="sign_in_text">Sign in</string>
     <string name="registration_text_conditions">By clicking Register you agree to our Terms and Conditions</string>
+    <string name="register_text">REGISTER</string>
+    <string name="or_text">or</string>
+    <string name="remember_me_text">Remember me</string>
+    <string name="password_text">Password</string>
+    <string name="e_mail_text">E-mail</string>
+    <string name="fill_out_text">Fill out the profile and go to the application!</string>
+    <string name="let_s_get_text">Let\'s get acquainted</string>
 
 </resources>

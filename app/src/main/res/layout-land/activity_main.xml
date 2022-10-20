@@ -32,8 +32,8 @@
             android:id="@+id/text_settings"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_medium"
-            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_large"
             android:text="@string/settings_text"
             android:textColor="@color/white"
             android:textSize="@dimen/text_size_large"
@@ -42,20 +42,21 @@
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/avatar"
-            android:layout_width="@dimen/avatar_image_size"
-            android:layout_height="@dimen/avatar_image_size"
+            android:layout_width="@dimen/avatar_image_size_horizontal"
+            android:layout_height="@dimen/avatar_image_size_horizontal"
             app:layout_constraintBottom_toTopOf="@+id/user_name"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_chainStyle="packed"
+
             app:srcCompat="@drawable/avatar_placeholder" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/user_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_extra_large"
+            android:layout_marginTop="@dimen/margin_large"
             android:text="@string/user_name_text"
             android:textColor="@color/white"
             android:textSize="@dimen/text_size_medium"
@@ -120,11 +121,12 @@
             android:id="@+id/linkedin_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_extra_large_62"
+
+            android:layout_marginTop="@dimen/margin_large"
             android:background="@color/white"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_profile_text"
             app:srcCompat="@drawable/linkedin_logo_vertical" />
 
         <ImageButton
@@ -140,9 +142,8 @@
 
         <Button
             android:id="@+id/view_contacts_button"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_large"
             android:layout_marginEnd="@dimen/margin_large"
             android:layout_marginBottom="@dimen/margin_large"
             android:backgroundTint="@color/orange"
@@ -153,16 +154,13 @@
             app:cornerRadius="@dimen/corner_radius"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toEndOf="@+id/edit_profile_button" />
 
 
         <Button
             android:id="@+id/edit_profile_button"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_large"
-            android:layout_marginEnd="@dimen/margin_large"
-            android:layout_marginBottom="@dimen/margin_large"
             android:backgroundTint="@color/white"
             android:foreground="@drawable/rectangle_black"
             android:text="@string/edit_profile_text"
@@ -170,21 +168,24 @@
             android:textColor="@color/black"
             android:textSize="@dimen/text_size_small"
             app:cornerRadius="@dimen/corner_radius"
-            app:layout_constraintBottom_toTopOf="@+id/view_contacts_button"
-            app:layout_constraintEnd_toEndOf="@+id/view_contacts_button"
-            app:layout_constraintStart_toStartOf="@+id/view_contacts_button" />
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/view_contacts_button"
+            app:layout_constraintBottom_toBottomOf="@+id/view_contacts_button"
+            app:layout_constraintTop_toTopOf="@+id/view_contacts_button"
+            tools:layout_editor_absoluteX="88dp" />
 
         <TextView
             android:id="@+id/edit_profile_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_large"
+            android:gravity="center"
             android:text="@string/go_to_the_settings_and_fill_out_the_profile"
             android:textColor="@color/black"
             android:textSize="@dimen/text_size_small"
-            app:layout_constraintBottom_toTopOf="@+id/edit_profile_button"
-            app:layout_constraintEnd_toEndOf="@+id/edit_profile_button"
-            app:layout_constraintStart_toStartOf="@+id/edit_profile_button" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
