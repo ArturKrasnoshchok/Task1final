@@ -57,8 +57,9 @@ class AuthPresenter(
      *
      */
     private fun parseUser(email: String): Pair<String, String> {
-        val firstName = email.substringBefore(".").capitalize(Locale.getDefault())
-        val lastName = email.substringAfter(".").substringBefore("@").capitalize(Locale.getDefault())
+        val firstName = email.substringBefore(".").replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }
+        val lastName = email.substringAfter(".").substringBefore("@")
+            .replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }
         return firstName to lastName
     }
 
@@ -73,8 +74,8 @@ class AuthPresenter(
      * The method checks the correctness of filling out the e-mail.
      */
     private fun checkEmail(email: String): Boolean {
-        return email.contains("@") && email.contains(".") &&
-                email.contains(" ").not()
+        return (email.contains("@") && email.contains(".") &&
+                email.contains(" ").not() && email.isEmpty().not())
     }
 
     /**

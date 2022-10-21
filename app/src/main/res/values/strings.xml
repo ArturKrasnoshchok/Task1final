@@ -4,13 +4,13 @@
     <string name="user_name_text">Lucile Alvarado</string>
     <string name="career_text">Career</string>
     <string name="home_address_text">Home address</string>
-    <string name="view_my_contacts_text">VIEW MY CONTACTS</string>
+    <string name="view_my_contacts_text">view my contacts</string>
     <string name="edit_profile_text">Edit profile</string>
     <string name="go_to_the_settings_and_fill_out_the_profile">Go to the settings and fill out the profile</string>
     <string name="already_have_an_account_text">Already have an account?</string>
     <string name="sign_in_text">Sign in</string>
     <string name="registration_text_conditions">By clicking Register you agree to our Terms and Conditions</string>
-    <string name="register_text">REGISTER</string>
+    <string name="register_text">register</string>
     <string name="or_text">or</string>
     <string name="remember_me_text">Remember me</string>
     <string name="password_text">Password</string>

@@ -35,10 +35,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.editProfileButton.setOnClickListener {
+        binding.buttonEditProfile.setOnClickListener {
             startActivity(Intent(this, AuthActivity::class.java))
         }
         //We replace the username with what was entered in the e-mail
-        binding.userName.text = "$firstName $lastName"
+        binding.tvUserName.text = "$firstName $lastName"
     }
 }

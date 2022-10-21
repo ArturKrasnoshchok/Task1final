@@ -6,13 +6,13 @@
     <string name="user_name_text">Lucile Alvarado</string>
     <string name="career_text">Професія</string>
     <string name="home_address_text">Домашня адреса</string>
-    <string name="view_my_contacts_text">ПЕРЕГЛЯНУТИ МОЇ КОНТАКТИ</string>
+    <string name="view_my_contacts_text">переглянути мої контакти</string>
     <string name="edit_profile_text">Редагування профілю</string>
     <string name="go_to_the_settings_and_fill_out_the_profile">Зайдіть в налаштування і заповніть профіль</string>
     <string name="already_have_an_account_text">Вже є аккаунт?</string>
     <string name="sign_in_text">Увійти</string>
     <string name="registration_text_conditions">Натиснувши «Зареєструватися», ви погоджуєтеся з нашими умовами</string>
-    <string name="register_text">ЗАРЕЄСТРУВАТИСЯ</string>
+    <string name="register_text">зареєструватися</string>
     <string name="or_text">чи</string>
     <string name="remember_me_text">Запам\'ятати мене</string>
     <string name="password_text">Пароль</string>

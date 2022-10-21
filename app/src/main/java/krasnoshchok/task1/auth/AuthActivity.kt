@@ -21,20 +21,20 @@ class AuthActivity : AppCompatActivity(), AuthView {
             UserStore(this)
         )
 
-        binding.registerButton.setOnClickListener {
-            presenter.sighUp(binding.emailText.text.toString().lowercase(Locale.ROOT), binding.passwordText.text.toString().lowercase(Locale.ROOT))
+        binding.buttonRegister.setOnClickListener {
+            presenter.sighUp(binding.editTextEmail.text.toString().lowercase(Locale.ROOT), binding.editTextPassword.text.toString().lowercase(Locale.ROOT))
 
         }
-        binding.rememberMeCheckBox.setOnCheckedChangeListener { _, isChecked ->
+        binding.checkBoxRememberMe.setOnCheckedChangeListener { _, isChecked ->
             presenter.rememberUser(isChecked)
         }
     }
 
     override fun showIncorrectEmail() {
-        binding.emailText.error = "Incorrect e-mail"
+        binding.editTextEmail.error = "Incorrect e-mail"
     }
 
     override fun showIncorrectPassword() {
-        binding.passwordText.error = "Incorrect password"
+        binding.editTextPassword.error = "Incorrect password"
     }
 }
