@@ -30,5 +30,4 @@ class UserStore(context: Context) {
         val password = sharedPreferences.getString(PASSWORD_ARG, null) ?: return null
         return UserEntity(firstName, lastName, email, password)
     }
-
 }

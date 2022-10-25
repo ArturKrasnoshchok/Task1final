@@ -6,6 +6,7 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
 
@@ -40,5 +41,5 @@ class MainActivity : AppCompatActivity() {
         }
         //We replace the username with what was entered in the e-mail
         binding.tvUserName.text = "$firstName $lastName"
-    }
+       }
 }

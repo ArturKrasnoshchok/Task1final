@@ -4,6 +4,10 @@ import krasnoshchok.task1.databinding.ActivityAuthBinding
 import krasnoshchok.task1.storage.UserStore
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.TextView
+import androidx.core.graphics.drawable.toDrawable
+import krasnoshchok.task1.R
 import java.util.*
 
 class AuthActivity : AppCompatActivity(), AuthView {
@@ -23,7 +27,6 @@ class AuthActivity : AppCompatActivity(), AuthView {
 
         binding.buttonRegister.setOnClickListener {
             presenter.sighUp(binding.editTextEmail.text.toString().lowercase(Locale.ROOT), binding.editTextPassword.text.toString().lowercase(Locale.ROOT))
-
         }
         binding.checkBoxRememberMe.setOnCheckedChangeListener { _, isChecked ->
             presenter.rememberUser(isChecked)
