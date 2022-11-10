@@ -84,16 +84,17 @@
         app:layout_constraintBottom_toTopOf="@+id/button_google_register"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <com.google.android.material.button.MaterialButton
+    <krasnoshchok.task1.auth.ButtonGoogle
         android:id="@+id/button_google_register"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_marginStart="@dimen/margin_large"
         android:layout_marginEnd="@dimen/margin_large"
         android:layout_marginBottom="@dimen/margin_medium"
-        android:foreground="@drawable/google_button"
         app:cornerRadius="@dimen/corner_radius"
-        app:layout_constraintBottom_toTopOf="@+id/tv_or" />
+        app:layout_constraintBottom_toTopOf="@+id/tv_or"
+        app:textSize="@dimen/text_size_large" />
+
 
     <TextView
         android:id="@+id/tv_or"

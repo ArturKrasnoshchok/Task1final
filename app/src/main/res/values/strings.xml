@@ -15,6 +15,7 @@
     <string name="remember_me_text">Remember me</string>
     <string name="password_text">Password</string>
     <string name="e_mail_text">E-mail</string>
+    <string name="GOOGLE" translatable="false">google_icon</string>
     <string name="fill_out_text">Fill out the profile and go to the application!</string>
     <string name="let_s_get_text">Let\'s get acquainted</string>
 

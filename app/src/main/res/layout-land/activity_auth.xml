@@ -83,13 +83,12 @@
         app:layout_constraintBottom_toTopOf="@+id/button_google_register"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <com.google.android.material.button.MaterialButton
+    <krasnoshchok.task1.auth.ButtonGoogle
         android:id="@+id/button_google_register"
         android:layout_width="@dimen/button_width"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/button_height"
         android:layout_marginBottom="@dimen/margin_large"
         android:foreground="@drawable/google_button"
-        app:cornerRadius="@dimen/corner_radius"
         app:layout_constraintBottom_toTopOf="@+id/tv_register"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/tv_or" />
@@ -110,7 +109,7 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_register"
         android:layout_width="@dimen/button_width"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/button_height"
         android:foreground="@drawable/rectangle_orange"
         android:text="@string/register_text"
         android:textAllCaps="true"
