@@ -6,7 +6,6 @@ import android.content.Context
 import android.content.res.TypedArray
 import android.graphics.Canvas
 import android.graphics.Paint
-
 import android.util.AttributeSet
 import android.view.View
 import androidx.core.content.res.ResourcesCompat
@@ -20,9 +19,10 @@ class ButtonGoogle @JvmOverloads constructor(
     defStyleAttr: Int = 0, defStyleRes: Int = 0
 ) : View(context, attributeSet, defStyleAttr, defStyleRes) {
 
+    private val textGoogle= "GOOGLE"
     private var textColor by Delegates.notNull<Int>()
     private var background by Delegates.notNull<Int>()
-    private var cornerRadius: Float by Delegates.notNull<Float>()
+    private var cornerRadius by Delegates.notNull<Float>()
     private lateinit var paintText: Paint
     private lateinit var paintButton: Paint
     private val googleIcon = ResourcesCompat.getDrawable(resources, R.drawable.google, null)
@@ -81,10 +81,12 @@ class ButtonGoogle @JvmOverloads constructor(
             cornerRadius,
             paintButton
         )
-        //  canvas.drawPaint(paintButton)
-        canvas.drawText("GOOGLE", position.textStartPositionX, position.textStartPositionY, paintText)
-        googleIcon?.setBounds(position.googleLeftPadding, position.googleTopPadding,
-            position.googleRightPadding, position.googleBottomPadding)
+        canvas.drawPaint(paintButton)
+        canvas.drawText(textGoogle, position.textStartPositionX, position.textStartPositionY, paintText)
+        googleIcon?.setBounds(
+            position.googleLeftPadding, position.googleTopPadding,
+            position.googleRightPadding, position.googleBottomPadding
+        )
         googleIcon?.draw(canvas)
 
     }
@@ -100,10 +102,10 @@ class ButtonGoogle @JvmOverloads constructor(
         val centerX = width / 2f
         val centerY = height / 2f
         return Position(
-            textStartPositionX = centerX - paintText.measureText("GOOGLE") / 2,
+            textStartPositionX = centerX - paintText.measureText(textGoogle) / 2,
             textStartPositionY = centerY + textSize,
-            googleLeftPadding = (centerX - paintText.measureText("GOOGLE") / 2 - 60).toInt(),
-            googleRightPadding = (centerX - paintText.measureText("GOOGLE") / 2 - 20).toInt(),
+            googleLeftPadding = (centerX - paintText.measureText(textGoogle) / 2 - 60).toInt(),
+            googleRightPadding = (centerX - paintText.measureText(textGoogle) / 2 - 20).toInt(),
             googleTopPadding = (centerY + textSize - heightButton).toInt(),
             googleBottomPadding = (centerY + textSize + textSize / 2).toInt()
         )
