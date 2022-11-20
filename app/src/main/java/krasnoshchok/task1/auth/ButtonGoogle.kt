@@ -19,7 +19,7 @@ class ButtonGoogle @JvmOverloads constructor(
     defStyleAttr: Int = 0, defStyleRes: Int = 0
 ) : View(context, attributeSet, defStyleAttr, defStyleRes) {
 
-    private val textGoogle= "GOOGLE"
+    private val textGoogle = "GOOGLE"
     private var textColor by Delegates.notNull<Int>()
     private var background by Delegates.notNull<Int>()
     private var cornerRadius by Delegates.notNull<Float>()
@@ -28,16 +28,7 @@ class ButtonGoogle @JvmOverloads constructor(
     private val googleIcon = ResourcesCompat.getDrawable(resources, R.drawable.google, null)
     private val textSize = 16f
     private val heightButton = 40f
-
-
-    data class Position(
-        val textStartPositionX: Float,
-        val textStartPositionY: Float,
-        val googleLeftPadding: Int,
-        val googleRightPadding: Int,
-        val googleTopPadding: Int,
-        val googleBottomPadding: Int,
-    )
+    private val saveDistance = 100
 
     init {
         if (attributeSet != null) {
@@ -58,8 +49,8 @@ class ButtonGoogle @JvmOverloads constructor(
     }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
-        val minWidth = suggestedMinimumWidth + paddingLeft + paddingRight
-        val minHeight = suggestedMinimumHeight + paddingTop + paddingBottom
+        val minWidth = suggestedMinimumWidth + paddingLeft + paddingRight + paintText.measureText(textGoogle).toInt() + 2 * heightButton.toInt() + saveDistance
+        val minHeight = suggestedMinimumHeight + paddingTop + paddingBottom + heightButton.toInt() * 2
         setMeasuredDimension(resolveSize(minWidth, widthMeasureSpec), resolveSize(minHeight, heightMeasureSpec))
     }
 
@@ -75,13 +66,13 @@ class ButtonGoogle @JvmOverloads constructor(
         canvas.drawRoundRect(
             0f,
             0f,
-            width.toFloat(),
-            height.toFloat(),
+            measuredWidth.toFloat(),
+            measuredHeight.toFloat(),
             cornerRadius,
             cornerRadius,
             paintButton
         )
-        canvas.drawPaint(paintButton)
+        //    canvas.drawPaint(paintButton)
         canvas.drawText(textGoogle, position.textStartPositionX, position.textStartPositionY, paintText)
         googleIcon?.setBounds(
             position.googleLeftPadding, position.googleTopPadding,
@@ -122,4 +113,13 @@ class ButtonGoogle @JvmOverloads constructor(
         cornerRadius = typedArray.getDimension(R.styleable.ButtonGoogle_cornerRadius, context.resources.getDimension(R.dimen.corner_radius))
         typedArray.recycle()
     }
+
+    data class Position(
+        val textStartPositionX: Float,
+        val textStartPositionY: Float,
+        val googleLeftPadding: Int,
+        val googleRightPadding: Int,
+        val googleTopPadding: Int,
+        val googleBottomPadding: Int,
+    )
 }
